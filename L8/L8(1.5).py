@@ -1,6 +1,7 @@
 import math
 def function(c,d):
     d = math.tan(a)
+    k = math.tan(b)
     if a<=3:
         f_1 = 15
         for i in range(1,6):
@@ -17,15 +18,14 @@ def function(c,d):
     else:
         f_2 = 15
         for i in range(1,6):
-            f_2+= d
-            d*= math.tan(a)
+            f_2+= k
+            k*= math.tan(b)
     return (f_1,f_2)
 a = float(input('Enter a = '))
 b = float(input('Enter b = '))
 print(function(a,b))
 u=max(function(a,b))
 print('u = {0}'.format(u))
-
 
 
 
