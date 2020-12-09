@@ -1,7 +1,5 @@
-import random
 n=int(input('Enter n = '))
-m=int(input('Enter m = '))
-a = [[float(input("a[{0}][{1}]=".format(i, j))) for j in range(n)] for i in range(n)]
+a = [[float(input("a[{0}][{1}]=".format(i, j))) for j in range(3)] for i in range(n)]
 k=0
 def print_matrix(a):
     for el in a:
