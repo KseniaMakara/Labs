@@ -1,14 +1,14 @@
-def func(i):
+import random
+n=int(input('Enter n = '))
+m=int(input('Enter m = '))
+a = [[random.randint(-100,100) for i in range(n)] for j in range(m)]
+def print_matrix(a):
+    for el in a:
+        print(el)
+print_matrix(a)
+k = 0
+for j in range(m):
     for i in range(n):
-        k=[]
-        for j in range(n):
-            if (a[i]/b[j])==(a[i]/b[j]):
-                for i1 in range(j):
-                    k.append(i1)
-                return k
-n = int(input('n = '))
-a = [float(input('Коефіцієнт a[{0}]='.format(i))) for i in range(n)]
-print(a)
-b = [float(input('Коефіцієнт b[{0}]='.format(i))) for i in range(n)]
-print(b)
-print(func(n))
+        if a[i][j]>0:
+            k+=1
+print(k)
