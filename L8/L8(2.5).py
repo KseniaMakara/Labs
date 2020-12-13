@@ -1,14 +1,15 @@
-def func(i):
-    for i in range(n):
-        k=[]
-        for j in range(n):
-            if (a[i]/b[j])==(a[i]/b[j]):
-                for i1 in range(j):
-                    k.append(i1)
-                return k
-n = int(input('n = '))
-a = [float(input('Коефіцієнт a[{0}]='.format(i))) for i in range(n)]
-print(a)
-b = [float(input('Коефіцієнт b[{0}]='.format(i))) for i in range(n)]
-print(b)
-print(func(n))
+n=int(input('Enter n = '))
+a = [[float(input("a[{0}][{1}]=".format(i, j))) for j in range(3)] for i in range(n)]
+k=0
+def print_matrix(a):
+    for el in a:
+        print(el)
+print_matrix(a)
+def is_paralel(l1,l2):
+    return l1[0]/l2[0]==l1[1]/l2[1]
+
+for i in range(n-1):
+    for j in range(i+1,n):
+        if (is_paralel(a[i],a[j])):
+            k+=1
+print(k)
