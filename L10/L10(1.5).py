@@ -1,35 +1,41 @@
-class Number:
-    def __init__(self,_n, _amount_of_figures, _mass, _figure_in_mass, _count, _el, _sum):
-        self.n = _n
-        self.amount_of_figures = _amount_of_figures
-        self.mass = _mass
-        self.figure_in_mass = _figure_in_mass
-        self.el = _el
-        self.count = _count
-        self.sum = _sum
-    def print_n(self):
-        self.n = int(input('Enter n = '))
-        print('n = {0}'.format(self.n ))
-    def print_count(self):
-        self.el = int(input('enter el for mass:'))
-    def amount_of_figures(self):
-        self.amount_of_figures = 0
-        self.mass = []
-        while self.n>0:
-            self.n//=10
-            self.mass.append(self.n%10)
-            self.amount_of_figures+=1
-        print(self.amount_of_figures,)
-    def count_figure(self):
-        self.count = self.mass.count(self.el)
-        print(self.count)
-    def sum(self):
-        self.sum = 0
-        for elem in self.mass:
-            self.sum+=elem
-        print(self.sum)
+class Number():
+    def __init__(self, n):
+        self.numbers = n
+    def enter_n(self):
+        self.numbers = input('Enter n = ')
+    def get_digits(self):
+        print(len(self.numbers.split(',')))
+    def get_number(self):
+        print(self.numbers)
+    def count_n(self):
+        el = int(input("Element in massive = "))
+        b = self.numbers.split(',')
+        g = 0
+        for i in range(len(self.numbers.split(','))):
+            if el == int(b[i]):
+                g+=1
+        print(g)
+    def get_sum(self):
+        s=0
+        for i in range(len(self.numbers.split(','))):
+            a = self.numbers.split(',')
+            s+=int(a[i])
+        print(s)
+    def __gt__(self, other):
+        if len(s)!=len(p):
+            if len(s)>len(p):
+                return True
+            else:
+                return False
+        return False
 
-
-
+    # def get_len(self):
+    #     return len(self.digits)
+#_________________________________________________
+p = Number('5,6,3,6,9,4')
+s = Number('8,4,6,3')
+p.get_number()
+p.get_sum()
+p.count_n()
 
 
