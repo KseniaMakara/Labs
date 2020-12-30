@@ -25,7 +25,7 @@ class Triangle():
         return Triangle( self.a - other.a, self.b -other.b )
 
     def __mul__(self, other):
-        return (other * self.a, other * self.b)
+        return Triangle(other * self.a, other * self.b)
 ##
 t1=Triangle()
 t1.print_a()
@@ -35,6 +35,3 @@ t2=Triangle()
 t2.print_a()
 t2.print_b()
 t2.get_s()
-
-
-
