@@ -8,15 +8,15 @@ Postman = []
 def serch(choose, criteria):
     if choose == 1:
         for i in range(len(Postman)):
-            if Byer[i]["House number "] == criteria:
+            if Postman[i]["House number "] == criteria:
                 print(Postman[i])
     if choose == 2:
-        for i in range(len(Byer)):
-            if Byer[i]["Amount of magazines"] == criteria:
+        for i in range(len(Postman)):
+            if Postman[i]["Amount of magazines"] == criteria:
                 print(Postman[i])
     if choose == 3:
-        for i in range(len(Byer)):
-            if Byer[i]["List of magazines"] == criteria:
+        for i in range(len(Postman)):
+            if Postman[i]["List of magazines"] == criteria:
                 print(Postman[i])
 while True:
     print("\n")
@@ -28,7 +28,7 @@ while True:
     choose = int(input("Choose number:"))
 
     if choose == 1:
-        print(Byer)
+        print(Postman)
     elif choose == 2:
 
         '''----Info about postman----'''
@@ -41,7 +41,7 @@ while True:
         postmanDict["House number"] = house_number
         postmanDict["Amount of magazines"] = amount_of_magazines
         postmanDict["List of magazines"] = list_of_magazines
-        Postman.append(byerDict)
+        Postman.append(postmanDict)
     elif choose == 3:
         print("Find:\n"
               "1.House number\n"
