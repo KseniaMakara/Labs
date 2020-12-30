@@ -13,11 +13,11 @@ class TFraction():
 
     def incresing_number(self):
         increase = float(input('enter digit for increasing = '))
-        print(self.numerator/self.denominator + increase)
+        self.numerator += increase*self.denominator
 
     def reducing_number(self):
         reduce = float(input('enter digit for reducing = '))
-        print(self.numerator/self.denominator - reduce)
+        self.numerator -= reduce*self.denominator
 
 # __________
 # n = TFraction()
@@ -25,5 +25,3 @@ class TFraction():
 # n.print_denominator()
 # n.incresing_number()
 # n.reducing_number()
-
-
