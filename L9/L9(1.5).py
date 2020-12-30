@@ -40,10 +40,10 @@ while True:
         phone_number = int(input("Enter phone number : "))
         specialization = input("Enter specialization: ")
         time = int(input("Enter time : "))
-        byerDict = {"Adress": "", "Phone number": 0, "Specialization": "", "Time": 0}
+        byerDict = {"Address": "", "Phone number": 0, "Specialization": "", "Time": 0}
 
         '''---Definition of the dictionary---'''
-        byerDict["Adress"] = adress
+        byerDict["Adress"] = address
         byerDict["Phone"] = phone_number
         byerDict[" specialization"] = specialization
         byerDict[" time"] = time
