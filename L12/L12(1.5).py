@@ -2,6 +2,24 @@ class Triangle():
     def __init__(self, a=0, b=0):
         self.a = a
         self.b = b
+    @property
+    def a(self):
+        return self.a
+    @a.setter
+    def a(self, value):
+        if value>0:
+            self.__a = value
+        else:
+            raise Exception('must be positive')
+    @property
+    def b(self):
+        return self.b
+    @b.setter
+    def b(self, value):
+        if value > 0:
+            self.__b = value
+        else:
+            raise Exception('must be positive')
     def print_a(self):
         self.a = float(input('enter a = '))
         return self.a
@@ -25,10 +43,17 @@ class Triangle():
         print(p)
         return p
 
-    def __lt__(self, other_triangle):
-        if t1 < t2:
-            print("tr is considered as lower than tr2")
-            return self.get_s() < other_triangle.s()
+    def __lt__(self, othere):
+        return s < other.s
+
+    def __add__(self, other):
+        return Triangle(other.a + self.print_a, other.b + self.print_b)
+
+    def __sub__(self, other):
+        return Triangle(other.a - self.print_a, other.b - self.print_b)
+
+    def __mul__(self, other):
+        return (other * self.a, other * self.b)
 ##
 t1=Triangle()
 t1.print_a()
