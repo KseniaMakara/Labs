@@ -35,7 +35,7 @@ while True:
         house_number = input("Enter house number: ")
         amount_of_magazines = int(input("Enter amount of magazines : "))
         list_of_magazines = input("Enter list of magazines: ")
-        postmanDict = {"Adress": "", "Phone number": 0, "Specialization": "", "Time": 0}
+        postmanDict = {"Нouse number": "", "Amount of magazines": 0, " ": "List of magazines"}
 
         '''---Definition of the dictionary---'''
         postmanDict["House number"] = house_number
