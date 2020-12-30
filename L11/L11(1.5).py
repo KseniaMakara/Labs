@@ -9,19 +9,23 @@ class Triangle():
         self.b = float(input('enter b = '))
         print('First leg = {0}'.format(self.b))
     def get_s(self):
-        s = self.a*self.b/2
-        print(s)
-        return s
+        return  self.a*self.b/2
+
     def get_perimeter(self):
         c = (self.a**2+self.b**2)**1/2
-        p = self.b+self.b+c
-        print(p)
-        return p
+        return self.b+self.b+c
 
-    def __lt__(self, other_triangle):
-        if t1 < t2:
-            print("tr is considered as lower than tr2")
-            return self.get_s() < other_triangle.s()
+    def __lt__(self, other):
+        return self.get_s() < other.get_s()
+
+    def __add__(self, other):
+        return Triangle(other.a + self.a, other.b + self.b)
+
+    def __sub__(self, other):
+        return Triangle( self.a - other.a, self.b -other.b )
+
+    def __mul__(self, other):
+        return (other * self.a, other * self.b)
 ##
 t1=Triangle()
 t1.print_a()
